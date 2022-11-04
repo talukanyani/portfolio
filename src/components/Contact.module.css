@@ -1,0 +1,61 @@
+.contact {
+    padding: 0 0.75rem;
+}
+
+.contact h1 {
+    color: var(--color6);
+}
+
+.contact nav {
+    position: absolute;
+}
+
+.contact nav ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact nav li {
+    color: var(--black1);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    outline: 2px dashed var(--black1);
+    outline-offset: -0.2rem;
+    background-color: var(--color6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact main {
+    margin-left: 8rem;
+}
+
+.contact main h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.contact main h2::before {
+    content: "——";
+    margin-right: 0.6rem;
+}
+
+.contact main a {
+    font-weight: 500;
+    color: var(--color1);
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact main a:hover {
+    color: var(--color6);
+}

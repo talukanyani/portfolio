@@ -1,4 +1,5 @@
 import styles from './App.module.css'
+import Contact from './components/Contact';
 
 import Home from './components/Home';
 import Navbar from './components/Navbar'
@@ -10,7 +11,8 @@ function App() {
       <div className={styles.app}>
         <Navbar />
         {/* <Home /> */}
-        <Skills />
+        {/* <Skills /> */}
+        <Contact />
       </div>
     </div>
   );
