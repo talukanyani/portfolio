@@ -1,0 +1,19 @@
+.home {
+    padding: 1rem;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--black3) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--black3) 100%),
+        url(../assets/talu_image480x480.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+}
+
+.home h1 {
+    font-size: 3rem;
+    color: var(--color2);
+    margin: 0;
+}
+
+.home p {
+    font-size: 0.9rem;
+}

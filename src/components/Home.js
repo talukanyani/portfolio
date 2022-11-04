@@ -1,7 +1,12 @@
+import styles from './Home.module.css'
+
 function Home() {
     return (
-        <div>
-            <h2>This is the home screen</h2>
+        <div className={styles.home}>
+            <h1>Welcome to my portfolio.</h1>
+            <p>
+                Use navigation bar above to switch between sections.
+            </p>
         </div>
     )
 }
