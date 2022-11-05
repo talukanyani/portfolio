@@ -1,7 +1,7 @@
 .home {
     padding: 1rem;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--black3) 100%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--black3) 100%),
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--black2) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--black2) 100%),
         url(../assets/talu_image480x480.jpg);
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,17 +1,18 @@
 .projects::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
 }
 
 .projects::-webkit-scrollbar {
-    background-color: var(--grey1);
+    background-color: var(--black3);
     border-radius: 8px;
 }
 
 .projects::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: var(--color1);
-    -webkit-box-shadow: inset 1px 0.5px 3px --grey2;
-    box-shadow: inset 1px 0.5px 3px var(--grey2);
+    -webkit-box-shadow: inset 1px 0.5px 3px var(--black3);
+    box-shadow: inset 1px 0.5px 3px var(--black3);
 }
 
 .projects::-webkit-scrollbar-thumb:active {
@@ -61,12 +62,12 @@
 
 .project_links img {
     width: 16rem;
-    border: 2px solid var(--grey1);
+    border: 2px solid var(--black3);
     border-radius: 0.5rem;
 }
 
 .project_links img:hover {
     cursor: pointer;
-    outline: 2px dashed var(--grey1);
+    outline: 2px dashed var(--black3);
     outline-offset: -0.5rem;
 }
