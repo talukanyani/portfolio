@@ -50,10 +50,7 @@
 
 .contact main a {
     font-weight: 500;
-    color: var(--color1);
     letter-spacing: 0.05rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 .contact main a:hover {

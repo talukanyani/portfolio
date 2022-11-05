@@ -1,0 +1,72 @@
+.projects::-webkit-scrollbar {
+    width: 8px;
+}
+
+.projects::-webkit-scrollbar {
+    background-color: var(--grey1);
+    border-radius: 8px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--color1);
+    -webkit-box-shadow: inset 1px 0.5px 3px --grey2;
+    box-shadow: inset 1px 0.5px 3px var(--grey2);
+}
+
+.projects::-webkit-scrollbar-thumb:active {
+    background-color: var(--color2);
+}
+
+.projects {
+    padding: 0 0.75rem;
+    font-size: 0.9rem;
+    height: calc(100vh - 9rem);
+    overflow-y: scroll;
+}
+
+.projects mark {
+    padding: 0 0.3rem;
+    border-radius: 0.3rem;
+    background-color: var(--color5);
+}
+
+.projects a:hover {
+    color: var(--color5);
+}
+
+.projects h1 {
+    color: var(--color5);
+}
+
+.projects h2 {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+.projects main {
+    padding: 0 0.75rem;
+}
+
+.project_links ul {
+    list-style: none;
+    margin: 0;
+}
+
+.project_links section {
+    display: flex;
+    justify-content: center;
+}
+
+.project_links img {
+    width: 16rem;
+    border: 2px solid var(--grey1);
+    border-radius: 0.5rem;
+}
+
+.project_links img:hover {
+    cursor: pointer;
+    outline: 2px dashed var(--grey1);
+    outline-offset: -0.5rem;
+}

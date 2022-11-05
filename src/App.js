@@ -1,8 +1,9 @@
 import styles from './App.module.css'
-import Contact from './components/Contact';
 
 import Home from './components/Home';
 import Navbar from './components/Navbar'
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import Skills from './components/Skills';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         <Navbar />
         {/* <Home /> */}
         {/* <Skills /> */}
-        <Contact />
+        {/* <Contact /> */}
+        <Projects />
       </div>
     </div>
   );
