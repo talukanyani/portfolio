@@ -24,13 +24,31 @@
     width: 4rem;
     height: 4rem;
     border-radius: 0.5rem;
-    outline: 2px dashed var(--black1);
-    outline-offset: -0.2rem;
     background-color: var(--color6);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    user-select: none;
+}
+
+.contact nav li:hover {
+    outline: 2px dashed var(--black3);
+    outline-offset: -0.2rem;
+}
+
+.contact nav li:active {
+    box-shadow: 0 3rem 8rem 1rem var(--color6);
+}
+
+.email_li {
+    outline: 2px dashed var(--black1);
+    outline-offset: -0.2rem;
+}
+
+.call_li {
+    outline: 2px dashed var(--black1);
+    outline-offset: -0.2rem;
 }
 
 .contact main {

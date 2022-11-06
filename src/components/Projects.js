@@ -1,14 +1,68 @@
+import { useState } from 'react'
 import styles from './Projects.module.css'
 
 import web_screenshoot from '../assets/tmlab_website_screenshoot.jpg'
+import arrow_left from '../assets/icon_arrow_left.svg'
+import arrow_right from '../assets/icon_arrow_right.svg'
 
 export default function Projects() {
+    const [currentTab, setCurrentTab] = useState(0)
+
+    const handleLeftArrowClick = () => {
+        if (currentTab >= 1 & currentTab <= 2) {
+            setCurrentTab(currentTab - 1);
+        }
+    }
+
+    const handleRightArrowClick = () => {
+        if (currentTab >= 0 & currentTab <= 1) {
+            setCurrentTab(currentTab + 1);
+        }
+    }
+
     return (
         <main className={styles.projects}>
             <h1>My Projects</h1>
-            <Project1 />
-            {/* <Project2 /> */}
-            {/* <Project3 /> */}
+            <nav>
+                <button
+                    onClick={handleLeftArrowClick}
+                    disabled={currentTab === 0}
+                >
+                    <img src={arrow_left} alt='arrow button' />
+                </button>
+                <section>
+                    <input
+                        type='radio'
+                        name='nav_pro'
+                        readonly
+                        checked={currentTab === 0}
+                        onChange={() => setCurrentTab(0)}
+                    />
+                    <input
+                        type='radio'
+                        name='nav_pro'
+                        readonly
+                        checked={currentTab === 1}
+                        onChange={() => setCurrentTab(1)}
+                    />
+                    <input
+                        type='radio'
+                        name='nav_pro'
+                        readonly
+                        checked={currentTab === 2}
+                        onChange={() => setCurrentTab(2)}
+                    />
+                </section>
+                <button
+                    onClick={handleRightArrowClick}
+                    disabled={currentTab === 2}
+                >
+                    <img src={arrow_right} alt='arrow button' />
+                </button>
+            </nav>
+            {currentTab === 0 && <Project1 />}
+            {currentTab === 1 && <Project2 />}
+            {currentTab === 2 && <Project3 />}
         </main>
     )
 }

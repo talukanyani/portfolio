@@ -1,28 +1,49 @@
+import { useState } from 'react'
 import styles from './Contact.module.css'
 
 import email from '../assets/icon_email.svg'
 import call from '../assets/icon_call.svg'
 import message from '../assets/icon_message.svg'
 
-function Contact() {
+export default function Contact() {
+    const [currentTab, setCurrentTab] = useState(0)
+
     return (
         <div className={styles.contact}>
             <h1>Contact Me</h1>
             <nav>
                 <ul>
-                    <li>
+                    <li
+                        onClick={() => setCurrentTab(0)}
+                        className={
+                            currentTab === 0
+                                ? styles.email_li
+                                : undefined
+                        }
+                    >
                         <img src={email} alt='icon' />
                         Email
                     </li>
-                    <li>
+                    <li
+                        onClick={() => setCurrentTab(1)}
+                        className={
+                            currentTab === 1
+                                ? styles.call_li
+                                : undefined
+                        }
+                    >
                         <img src={call} alt='icon' />
                         Call
                     </li>
                 </ul>
             </nav>
             <main>
-                {/* <Email /> */}
-                <Call />
+                {currentTab === 0 &&
+                    <Email />
+                }
+                {currentTab === 1 &&
+                    <Call />
+                }
             </main>
         </div>
     )
@@ -47,5 +68,3 @@ function Call() {
         </div>
     )
 }
-
-export default Contact;

@@ -71,3 +71,41 @@
     outline: 2px dashed var(--black3);
     outline-offset: -0.5rem;
 }
+
+.projects nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.projects nav button {
+    padding: 0;
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.projects nav button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.projects nav img {
+    width: 1.75rem;
+}
+
+.projects nav input {
+    appearance: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--color5);
+    margin: 0 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.projects nav input:checked {
+    border-width: 0.4rem;
+}

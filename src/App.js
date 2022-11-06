@@ -9,24 +9,24 @@ import Skills from './components/Skills';
 import Eductation from './components/Education';
 
 function App() {
-  const [currentTab, setCurrentTab] = useState('home')
+  const [currentTab, setCurrentTab] = useState(0)
 
   return (
     <div className={styles.app_overlay}>
       <div className={styles.app}>
         <Navbar
           currentTab={currentTab}
-          setToHome={() => setCurrentTab('home')}
-          setToEdu={() => setCurrentTab('edu')}
-          setToProjects={() => setCurrentTab('projects')}
-          setToSkills={() => setCurrentTab('skills')}
-          setToContact={() => setCurrentTab('contact')}
+          setToHome={() => setCurrentTab(0)}
+          setToEdu={() => setCurrentTab(1)}
+          setToSkills={() => setCurrentTab(2)}
+          setToProjects={() => setCurrentTab(3)}
+          setToContact={() => setCurrentTab(4)}
         />
-        {currentTab == 'home' && <Home />}
-        {currentTab == 'edu' && <Eductation />}
-        {currentTab == 'skills' && <Skills />}
-        {currentTab == 'projects' && <Projects />}
-        {currentTab == 'contact' && <Contact />}
+        {currentTab === 0 && <Home />}
+        {currentTab === 1 && <Eductation />}
+        {currentTab === 2 && <Skills />}
+        {currentTab === 3 && <Projects />}
+        {currentTab === 4 && <Contact />}
       </div>
     </div>
   );

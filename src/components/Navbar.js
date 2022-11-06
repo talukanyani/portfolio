@@ -7,17 +7,24 @@ import skills from '../assets/icon_skills.svg'
 import projects from '../assets/icon_projects.svg'
 import contact from '../assets/icon_contact.svg'
 
-export default function Navbar(props) {
+export default function Navbar({
+    currentTab,
+    setToHome,
+    setToEdu,
+    setToSkills,
+    setToProjects,
+    setToContact
+}) {
     return (
         <div className={styles.navbar}>
             <Header />
             <Navigation
-                currentTab={props.currentTab}
-                setToHome={props.setToHome}
-                setToEdu={props.setToEdu}
-                setToProjects={props.setToProjects}
-                setToSkills={props.setToSkills}
-                setToContact={props.setToContact}
+                currentTab={currentTab}
+                setToHome={setToHome}
+                setToEdu={setToEdu}
+                setToProjects={setToProjects}
+                setToSkills={setToSkills}
+                setToContact={setToContact}
             />
         </div>
     )
@@ -38,16 +45,22 @@ function Header() {
     )
 }
 
-function Navigation(props) {
-    var currentTab = props.currentTab
+function Navigation({
+    currentTab,
+    setToHome,
+    setToEdu,
+    setToSkills,
+    setToProjects,
+    setToContact
+}) {
 
     return (
         <nav className={styles.navigation}>
             <ul>
                 <li
-                    onClick={props.setToHome}
+                    onClick={setToHome}
                     className={
-                        currentTab === 'home'
+                        currentTab === 0
                             ? styles.home_li
                             : undefined
                     }
@@ -56,9 +69,9 @@ function Navigation(props) {
                     Home
                 </li>
                 <li
-                    onClick={props.setToEdu}
+                    onClick={setToEdu}
                     className={
-                        currentTab === 'edu'
+                        currentTab === 1
                             ? styles.edu_li
                             : undefined
                     }
@@ -67,9 +80,9 @@ function Navigation(props) {
                     Education
                 </li>
                 <li
-                    onClick={props.setToSkills}
+                    onClick={setToSkills}
                     className={
-                        currentTab === 'skills'
+                        currentTab === 2
                             ? styles.skills_li
                             : undefined
                     }
@@ -78,9 +91,9 @@ function Navigation(props) {
                     Skills
                 </li>
                 <li
-                    onClick={props.setToProjects}
+                    onClick={setToProjects}
                     className={
-                        currentTab === 'projects'
+                        currentTab === 3
                             ? styles.projects_li
                             : undefined
                     }
@@ -89,9 +102,9 @@ function Navigation(props) {
                     Projects
                 </li>
                 <li
-                    onClick={props.setToContact}
+                    onClick={setToContact}
                     className={
-                        currentTab === 'contact'
+                        currentTab === 4
                             ? styles.contact_li
                             : undefined
                     }
