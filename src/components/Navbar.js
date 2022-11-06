@@ -7,11 +7,18 @@ import skills from '../assets/icon_skills.svg'
 import projects from '../assets/icon_projects.svg'
 import contact from '../assets/icon_contact.svg'
 
-function Navbar() {
+export default function Navbar(props) {
     return (
         <div className={styles.navbar}>
             <Header />
-            <Navigation />
+            <Navigation
+                currentTab={props.currentTab}
+                setToHome={props.setToHome}
+                setToEdu={props.setToEdu}
+                setToProjects={props.setToProjects}
+                setToSkills={props.setToSkills}
+                setToContact={props.setToContact}
+            />
         </div>
     )
 }
@@ -31,27 +38,64 @@ function Header() {
     )
 }
 
-function Navigation() {
+function Navigation(props) {
+    var currentTab = props.currentTab
+
     return (
         <nav className={styles.navigation}>
             <ul>
-                <li>
+                <li
+                    onClick={props.setToHome}
+                    className={
+                        currentTab === 'home'
+                            ? styles.home_li
+                            : undefined
+                    }
+                >
                     <img src={home} alt='icon' />
                     Home
                 </li>
-                <li>
+                <li
+                    onClick={props.setToEdu}
+                    className={
+                        currentTab === 'edu'
+                            ? styles.edu_li
+                            : undefined
+                    }
+                >
                     <img src={education} alt='icon' />
                     Education
                 </li>
-                <li>
+                <li
+                    onClick={props.setToSkills}
+                    className={
+                        currentTab === 'skills'
+                            ? styles.skills_li
+                            : undefined
+                    }
+                >
                     <img src={skills} alt='icon' />
                     Skills
                 </li>
-                <li>
+                <li
+                    onClick={props.setToProjects}
+                    className={
+                        currentTab === 'projects'
+                            ? styles.projects_li
+                            : undefined
+                    }
+                >
                     <img src={projects} alt='icon' />
                     Projects
                 </li>
-                <li>
+                <li
+                    onClick={props.setToContact}
+                    className={
+                        currentTab === 'contact'
+                            ? styles.contact_li
+                            : undefined
+                    }
+                >
                     <img src={contact} alt='icon' />
                     Contact
                 </li>
@@ -59,5 +103,3 @@ function Navigation() {
         </nav>
     )
 }
-
-export default Navbar;

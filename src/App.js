@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './App.module.css'
 
 import Home from './components/Home';
@@ -8,15 +9,24 @@ import Skills from './components/Skills';
 import Eductation from './components/Education';
 
 function App() {
+  const [currentTab, setCurrentTab] = useState('home')
+
   return (
     <div className={styles.app_overlay}>
       <div className={styles.app}>
-        <Navbar />
-        {/* <Home /> */}
-        {/* <Skills /> */}
-        {/* <Contact /> */}
-        {/* <Projects /> */}
-        <Eductation />
+        <Navbar
+          currentTab={currentTab}
+          setToHome={() => setCurrentTab('home')}
+          setToEdu={() => setCurrentTab('edu')}
+          setToProjects={() => setCurrentTab('projects')}
+          setToSkills={() => setCurrentTab('skills')}
+          setToContact={() => setCurrentTab('contact')}
+        />
+        {currentTab == 'home' && <Home />}
+        {currentTab == 'edu' && <Eductation />}
+        {currentTab == 'skills' && <Skills />}
+        {currentTab == 'projects' && <Projects />}
+        {currentTab == 'contact' && <Contact />}
       </div>
     </div>
   );
