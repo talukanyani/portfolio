@@ -18,7 +18,7 @@
 .education {
     padding: 0 0.75rem;
     height: calc(100vh - 9rem);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .education h1 {

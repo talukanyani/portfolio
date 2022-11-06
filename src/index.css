@@ -5,12 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
 
 a {
   color: var(--color1);
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+:root {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 440px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  :root {
+    font-size: 10px;
+  }
 }
 
 :root {

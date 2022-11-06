@@ -23,7 +23,7 @@
     padding: 0 0.75rem;
     font-size: 0.9rem;
     height: calc(100vh - 9rem);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .projects mark {
