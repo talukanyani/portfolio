@@ -1,0 +1,37 @@
+.about {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about_content {
+    width: 30rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about h1 {
+    color: var(--about);
+}
+
+.about a {
+    color: var(--about);
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+.about_image {
+    position: relative;
+    right: 0;
+    z-index: 0;
+}
+
+.about_image img {
+    width: 22.5rem;
+    -webkit-filter: grayscale(0.3);
+    filter: grayscale(0.3);
+    transform: scaleX(-1);
+}

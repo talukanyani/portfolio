@@ -3,10 +3,10 @@ import styles from './App.module.css'
 
 import Navbar from './components/Navbar'
 import Home from './components/Home';
+import About from './components/About';
+import Stack from './components/Stack';
 // import Projects from './components/Projects';
 // import Contact from './components/Contact';
-// import Skills from './components/Skills';
-// import Eductation from './components/Education';
 
 export default function App() {
   return (
@@ -14,8 +14,8 @@ export default function App() {
       <div className={styles.app_content}>
         <Navbar />
         <Home />
-        {/* <Eductation /> */}
-        {/* <Skills /> */}
+        <About />
+        <Stack />
         {/* <Projects /> */}
         {/* <Contact /> */}
       </div>

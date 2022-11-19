@@ -1,0 +1,65 @@
+.stack {
+    padding: 5rem 0;
+}
+
+.stack h1 {
+    color: var(--stack);
+    position: relative;
+}
+
+.stack h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.stack h2::before {
+    content: "——";
+    margin-right: 0.5rem;
+}
+
+.stack h2 span {
+    font-size: 0.8rem;
+    color: var(--text5);
+    text-transform: lowercase;
+    padding: 0 0.2rem;
+    margin-left: 0.5rem;
+    background-color: var(--stack);
+    border-radius: 0.2rem;
+}
+
+.stack_parts {
+    width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.stack ul {
+    list-style: none;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stack li {
+    font-style: italic;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.stack img {
+    width: 3rem;
+}

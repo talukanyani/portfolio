@@ -2,7 +2,18 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     width: 100vw;
+    background: -webkit-gradient(linear,
+            left top, left bottom,
+            color-stop(60%, var(--surface1)),
+            to(var(--black40_p8_opacity)));
+    background: -o-linear-gradient(top,
+            var(--surface1) 60%,
+            var(--black40_p8_opacity) 100%);
+    background: linear-gradient(180deg,
+            var(--surface1) 60%,
+            var(--black40_p8_opacity) 100%);
 }
 
 .navbar_content {
@@ -39,6 +50,7 @@
 
 .navigation li a {
     color: var(--text4);
+    text-decoration: none;
     width: 6rem;
     padding: 0.4rem;
     display: -webkit-box;
