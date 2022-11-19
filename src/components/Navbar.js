@@ -1,116 +1,59 @@
+import React from 'react'
 import styles from './Navbar.module.css'
 
-import talu_img from '../assets/talu_image96x96.jpg'
-import home from '../assets/icon_home.svg'
-import education from '../assets/icon_education.svg'
-import skills from '../assets/icon_skills.svg'
-import projects from '../assets/icon_projects.svg'
-import contact from '../assets/icon_contact.svg'
+import logo_img from '../assets/portfolio_logo.png'
+import home_icon from '../assets/icon_home.svg'
+import about_icon from '../assets/icon_about.svg'
+import stack_icon from '../assets/icon_stack.svg'
+import projects_icon from '../assets/icon_projects.svg'
+import contact_icon from '../assets/icon_contact.svg'
 
-export default function Navbar({
-    currentTab,
-    setToHome,
-    setToEdu,
-    setToSkills,
-    setToProjects,
-    setToContact
-}) {
+export default function Navbar() {
     return (
-        <div className={styles.navbar}>
-            <Header />
-            <Navigation
-                currentTab={currentTab}
-                setToHome={setToHome}
-                setToEdu={setToEdu}
-                setToProjects={setToProjects}
-                setToSkills={setToSkills}
-                setToContact={setToContact}
-            />
-        </div>
-    )
-}
-
-function Header() {
-    return (
-        <header className={styles.header}>
-            <img
-                src={talu_img}
-                alt="Talukanyani's avatar"
-            />
-            <section>
-                <h1>Talukanyani Mutshaeni</h1>
-                <p>Full Stack Web Developer</p>
-            </section>
+        <header className={styles.navbar}>
+            <div className={styles.navbar_content}>
+                <div className={styles.logo}>
+                    <img src={logo_img} alt="logo" />
+                </div>
+                <Navigation />
+            </div>
         </header>
     )
 }
 
-function Navigation({
-    currentTab,
-    setToHome,
-    setToEdu,
-    setToSkills,
-    setToProjects,
-    setToContact
-}) {
-
+function Navigation() {
     return (
         <nav className={styles.navigation}>
             <ul>
-                <li
-                    onClick={setToHome}
-                    className={
-                        currentTab === 0
-                            ? styles.home_li
-                            : undefined
-                    }
-                >
-                    <img src={home} alt='icon' />
-                    Home
+                <li>
+                    <a href='/#'>
+                        <img src={home_icon} alt='icon' />
+                        Home
+                    </a>
                 </li>
-                <li
-                    onClick={setToEdu}
-                    className={
-                        currentTab === 1
-                            ? styles.edu_li
-                            : undefined
-                    }
-                >
-                    <img src={education} alt='icon' />
-                    Education
+                <li>
+                    <a href='/#about'>
+                        <img src={about_icon} alt='icon' />
+                        About
+                    </a>
                 </li>
-                <li
-                    onClick={setToSkills}
-                    className={
-                        currentTab === 2
-                            ? styles.skills_li
-                            : undefined
-                    }
-                >
-                    <img src={skills} alt='icon' />
-                    Skills
+                <li>
+                    <a href='/#Stack'>
+                        <img src={stack_icon} alt='icon' />
+                        Stack
+                    </a>
                 </li>
-                <li
-                    onClick={setToProjects}
-                    className={
-                        currentTab === 3
-                            ? styles.projects_li
-                            : undefined
-                    }
-                >
-                    <img src={projects} alt='icon' />
-                    Projects
+                <li>
+                    <a href='/#projects'>
+                        <img src={projects_icon} alt='icon' />
+                        Projects
+                    </a>
                 </li>
-                <li
-                    onClick={setToContact}
-                    className={
-                        currentTab === 4
-                            ? styles.contact_li
-                            : undefined
-                    }
-                >
-                    <img src={contact} alt='icon' />
-                    Contact
+                <li>
+                    <a href='/#contact'>
+                        <img src={contact_icon} alt='icon' />
+                        Contact
+                    </a>
                 </li>
             </ul>
         </nav>

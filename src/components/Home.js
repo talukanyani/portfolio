@@ -1,14 +1,19 @@
+import React from 'react'
 import styles from './Home.module.css'
 
-function Home() {
+import down_icon from '../assets/icon_down_arrow.svg'
+
+export default function Home() {
     return (
-        <div className={styles.home}>
-            <h1>Welcome to my portfolio.</h1>
-            <p>
-                Use navigation bar above to switch between sections.
-            </p>
+        <div className={styles.home} id='home'>
+            <h1>
+                <span>Hi, my name is</span><br />
+                <span>Talukanyani Mutshaeni</span>
+            </h1>
+            <h2>Welcome to my <b>portfolio.</b></h2>
+            <button>
+                <img src={down_icon} alt='down icon button' />
+            </button>
         </div>
     )
 }
-
-export default Home;

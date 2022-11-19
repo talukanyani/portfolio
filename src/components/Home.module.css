@@ -1,25 +1,37 @@
 .home {
-    padding: 1rem;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(var(--black2))),
-        -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(var(--black2))),
-        url(../assets/talu_image480x480.jpg);
-    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, var(--black2) 100%),
-        -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, var(--black2) 100%),
-        url(../assets/talu_image480x480.jpg);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--black2) 100%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--black2) 100%),
-        url(../assets/talu_image480x480.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 480px;
+    padding: 12rem 0 6rem;
 }
 
+
 .home h1 {
-    font-size: 3rem;
-    color: var(--color2);
     margin: 0;
 }
 
-.home p {
-    font-size: 0.9rem;
+.home h1 span:nth-of-type(1) {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.home h1 span:nth-of-type(2) {
+    font-size: 3rem;
+    color: var(--home);
+}
+
+.home h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.home h2 b {
+    color: var(--home);
+    font-weight: 700;
+}
+
+.home button {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
 }

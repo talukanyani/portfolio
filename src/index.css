@@ -51,10 +51,24 @@ a {
   --grey2: #8c8c8c;
   --grey3: #b4b4b4;
 
-  --color1: #50b4cf;
-  --color2: #7dc59b;
-  --color3: #a7c57d;
-  --color4: #9b7dc5;
-  --color5: #dfab8f;
-  --color6: #c5bf7d;
+  --color1: #7dc59b;
+  --color2: #a7c57d;
+  --color3: #c5bf7d;
+  --color4: #dfab8f;
+  --color5: #7da7c5;
+}
+
+:root {
+  --text1: var(--white1);
+  --text2: var(--white2);
+  --text3: var(--white3);
+  --text4: var(--black1);
+
+  --surface1: var(--black2);
+
+  --home: var(--color1);
+  --about: var(--color2);
+  --stack: var(--color3);
+  --projects: var(--color4);
+  --contact: var(--color5);
 }
