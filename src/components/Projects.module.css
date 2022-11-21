@@ -1,130 +1,84 @@
-.projects::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.projects::-webkit-scrollbar {
-    background-color: var(--black3);
-    border-radius: 8px;
-}
-
-.projects::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: var(--color1);
-    -webkit-box-shadow: inset 1px 0.5px 3px var(--black3);
-    box-shadow: inset 1px 0.5px 3px var(--black3);
-}
-
-.projects::-webkit-scrollbar-thumb:active {
-    background-color: var(--color2);
-}
-
 .projects {
-    padding: 0 0.75rem;
-    font-size: 0.9rem;
-    height: calc(100vh - 9rem);
-    overflow-y: auto;
-}
-
-.projects mark {
-    padding: 0 0.3rem;
-    border-radius: 0.3rem;
-    background-color: var(--color5);
-}
-
-.projects a:hover {
-    color: var(--color5);
-}
-
-.projects main {
-    padding: 0 0.75rem;
+    padding: 6rem 0 4rem;
 }
 
 .projects h1 {
-    color: var(--color5);
+    color: var(--projects);
 }
 
-.projects h2 {
-    font-weight: 300;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.projects>div {
+    margin-top: 3rem;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.projects nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.card {
+    padding: 1.25rem;
+    outline: 0.2rem dashed var(--border2);
+    outline-offset: -0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--surface2);
+    -webkit-box-shadow: inset 0 0 1rem -0.25rem var(--shadow2);
+    box-shadow: inset 0 0 1rem -0.25rem var(--shadow2);
 }
 
-.projects nav button {
-    padding: 0;
-    line-height: 0;
-    border: none;
-    background-color: transparent;
+.card>img {
+    width: 20rem;
+    border-radius: 0.5rem;
+}
+
+.card h2 {
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.card section {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    gap: 0.4rem;
+}
+
+.card button {
+    position: relative;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: inherit;
+    padding: 0.3rem;
+    border: 0.1rem solid var(--border1);
+    border-radius: 0.25rem;
+    background: transparent;
     cursor: pointer;
+    transition: all 0.4s ease;
 }
 
-.projects nav button:disabled {
-    opacity: 0.3;
-    cursor: default;
+.card button:hover {
+    -webkit-box-shadow: inset 0 0 2rem -1rem var(--border1);
+    box-shadow: inset 0 0 2rem -1rem var(--border1);
 }
 
-.projects nav img {
-    width: 1.75rem;
+.card button:active {
+    -webkit-box-shadow: inset 0 0 4rem -1rem var(--border1);
+    box-shadow: inset 0 0 4rem -1rem var(--border1);
 }
 
-.projects nav input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    border: 0.1rem solid var(--color5);
-    margin: 0 0.4rem;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+.card button:nth-of-type(1)::after {
+    position: absolute;
+    content: "→";
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.projects nav input:checked {
-    border-width: 0.4rem;
+.card button:nth-of-type(1):hover::after {
+    margin-left: 0.5rem;
+    opacity: 1;
 }
 
-.project_links {
-    padding: 0.75rem;
-    border: 0.05rem solid var(--grey3);
-    border-radius: 0.5rem;
-}
-
-.project_links p {
-    margin: 0;
-}
-
-.project_links ul {
-    list-style: none;
-}
-
-.project_picture {
-    margin-top: 1rem;
-}
-
-.project_picture img {
-    width: 100%;
-    border: 0.1rem solid var(--grey3);
-    border-radius: 0.5rem;
+.card button img {
+    width: 1.5rem;
+    display: flex;
+    margin: auto;
 }

@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home';
 import About from './components/About';
 import Stack from './components/Stack';
-// import Projects from './components/Projects';
+import Projects from './components/Projects';
 // import Contact from './components/Contact';
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
         <Home />
         <About />
         <Stack />
-        {/* <Projects /> */}
+        <Projects />
         {/* <Contact /> */}
       </div>
     </div>
