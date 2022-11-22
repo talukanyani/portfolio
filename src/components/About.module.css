@@ -1,13 +1,15 @@
 .about {
     padding: 5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .about_content {
     width: 30rem;
-    position: relative;
-    z-index: 1;
 }
 
 .about h1 {
@@ -23,15 +25,33 @@
     text-decoration: underline;
 }
 
-.about_image {
-    position: relative;
-    right: 0;
-    z-index: 0;
-}
-
 .about_image img {
     width: 22.5rem;
     -webkit-filter: grayscale(0.3);
     filter: grayscale(0.3);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        position: relative;
+    }
+
+    .about_image {
+        position: absolute;
+        right: 0;
+        z-index: 0;
+    }
+
+    .about_content {
+        position: relative;
+        z-index: 1;
+        width: auto;
+        height: 22.5rem;
+        background: -webkit-gradient(linear, left top, right top, color-stop(25%, var(--surface1)), to(rgba(0, 0, 0, 0)));
+        background: -o-linear-gradient(left, var(--surface1) 25%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(90deg, var(--surface1) 25%, rgba(0, 0, 0, 0) 100%);
+    }
 }

@@ -8,6 +8,8 @@
 }
 
 .contact>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 5rem;
 }
@@ -37,6 +39,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
@@ -57,7 +61,6 @@
 
 .contact_main {
     width: 25rem;
-    height: 25rem;
     position: relative;
 }
 
@@ -229,6 +232,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
+    -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: var(--text1) !important;
 }
@@ -254,4 +258,14 @@ input:-webkit-autofill:active {
 
 .input_error {
     outline: 2px dashed var(--error2)
+}
+
+@media screen and (max-width: 600px) {
+    .contact>div {
+        gap: 2rem;
+    }
+
+    .contact_main {
+        width: 100%;
+    }
 }

@@ -8,7 +8,10 @@
 
 .projects>div {
     margin-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -36,7 +39,9 @@
 
 .card section {
     margin: 1rem 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 4fr 0.4rem 1fr 0.4rem 1fr;
     grid-template-columns: 4fr 1fr 1fr;
     gap: 0.4rem;
 }
@@ -51,6 +56,8 @@
     border-radius: 0.25rem;
     background: transparent;
     cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
@@ -69,6 +76,7 @@
     content: "→";
     opacity: 0;
     -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -79,6 +87,14 @@
 
 .card button img {
     width: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: auto;
+}
+
+@media screen and (max-width: 420px) {
+    .card>img {
+        width: 100%;
+    }
 }
