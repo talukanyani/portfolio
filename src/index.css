@@ -35,6 +35,9 @@
   --grey120: #787878;
   --grey160: #a0a0a0;
 
+  --red1: #af0000;
+  --red2: #d77878;
+
   --color1: #7dc59b;
   --color2: #a7c57d;
   --color3: #c5bf7d;
@@ -46,6 +49,12 @@
 }
 
 :root {
+  --home: var(--color1);
+  --about: var(--color2);
+  --stack: var(--color3);
+  --projects: var(--color4);
+  --contact: var(--color5);
+
   --text1: var(--white245);
   --text2: var(--white235);
   --text3: var(--white225);
@@ -61,11 +70,8 @@
   --border1: var(--white225);
   --border2: var(--grey80);
 
-  --home: var(--color1);
-  --about: var(--color2);
-  --stack: var(--color3);
-  --projects: var(--color4);
-  --contact: var(--color5);
+  --error1: var(--red1);
+  --error2: var(--red2);
 }
 
 body {
