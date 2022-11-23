@@ -11,7 +11,7 @@ export default function Home() {
                 <span>Talukanyani Mutshaeni</span>
             </h1>
             <h2>Welcome to my <b>portfolio.</b></h2>
-            <button>
+            <button onClick={() => window.scrollBy(0, 400)}>
                 <img src={down_icon} alt='down icon button' />
             </button>
         </div>

@@ -1,5 +1,5 @@
 .about {
-    padding: 5rem 0;
+    padding: 6rem 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16,13 +16,9 @@
     color: var(--about);
 }
 
-.about a {
+.about p span {
     color: var(--about);
-    text-decoration: none;
-}
-
-.about a:hover {
-    text-decoration: underline;
+    cursor: pointer;
 }
 
 .about_image img {

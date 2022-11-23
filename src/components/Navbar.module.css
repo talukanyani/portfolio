@@ -54,9 +54,9 @@
     width: 1.5rem;
 }
 
-.navigation li a {
+.navigation li {
     color: var(--text4);
-    text-decoration: none;
+    width: 6rem;
     padding: 0.4rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -65,10 +65,6 @@
     -ms-flex-align: center;
     align-items: center;
     gap: 0.3rem;
-}
-
-.navigation li {
-    width: 7rem;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
