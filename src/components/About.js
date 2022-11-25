@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './About.module.css'
 
-import about_illustration from '../assets/portfolio_logo.png'
+import about_illustration from '../assets/about_illustration.png'
 
 export default function About() {
     const scrollTo = (id) => {
