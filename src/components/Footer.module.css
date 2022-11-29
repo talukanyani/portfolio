@@ -1,0 +1,31 @@
+.footer {
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer ul img {
+    width: 2.5rem;
+}
+
+.footer a {
+    display: flex;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    rotate: 15deg;
+}
+
+.footer a:active {
+    rotate: 360deg;
+}

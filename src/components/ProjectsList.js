@@ -122,11 +122,7 @@ export function Portfolio(props) {
                             </a>
                         </button>
                         <button>
-                            <a
-                                target='_blank'
-                                rel='noreferrer noopener'
-                                href='/portfolio'
-                            >
+                            <a href='/portfolio'>
                                 <img
                                     src={globe_icon}
                                     alt='web icon'

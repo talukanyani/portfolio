@@ -87,7 +87,7 @@ export default function Stack() {
                     <ul>
                         <li>
                             <img src={aws_ebs} alt='aws icon' />
-                            Elastic Beanstalk
+                            E Beanstalk
                         </li>
                         <li>
                             <img src={aws_route53} alt='aws icon' />
@@ -106,7 +106,7 @@ export default function Stack() {
                         </li>
                         <li>
                             <img src={chrome} alt='browser icon' />
-                            Browser DevTools
+                            DevTools
                         </li>
                         <li>
                             <img src={postman} alt='postman icon' />

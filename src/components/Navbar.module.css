@@ -31,6 +31,10 @@
     align-items: center;
 }
 
+.logo a {
+    display: flex;
+}
+
 .logo img {
     width: 4.5rem;
     -webkit-filter: grayscale(0.3);

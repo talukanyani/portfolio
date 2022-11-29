@@ -18,11 +18,13 @@ export default function About() {
             <div className={styles.about_content}>
                 <h1>About Me</h1>
                 <p>
-                    I'm a Full Stack Web Developer working with Javascript and other web technologies to develop web apps.
+                    I'm a Software Developer working with Javascript, Dart, and <span onClick={() => scrollTo('stack')}>other technologies</span> to develop <span onClick={() => scrollTo('stack')}>web and mobile apps</span>.
                 </p>
                 <p>
-                    My journey started in university when I was introduced to programming with C and Octave GNU. I got more interested in that and I wanted to build something cool that runs using code<br />
-                    ...and here I'm, programming and developing <span onClick={() => scrollTo('projects')}>something cool</span>. My aim is to build something big!!
+                    My journey in tech started in University of Johannesburg while studying Mechanical Engineering. I was introduced to programming with C and Octave GNU, I got more interested and started learning more technologies by myself.
+                </p>
+                <p>
+                    I have gained experience in both frontend and backend development. I'm open to use my existing skills and eager to learn more.
                 </p>
             </div>
             <div className={styles.about_image}>

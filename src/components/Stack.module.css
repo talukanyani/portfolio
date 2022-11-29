@@ -50,7 +50,7 @@
 }
 
 .stack li {
-    font-style: italic;
+    font-family: var(--font-mono);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

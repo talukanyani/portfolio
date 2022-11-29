@@ -13,7 +13,9 @@ export default function Navbar({ currentComp }) {
         <header className={styles.navbar}>
             <div className={styles.navbar_content}>
                 <div className={styles.logo}>
-                    <img src={logo_img} alt="logo" />
+                    <a href='/portfolio'>
+                        <img src={logo_img} alt="logo" />
+                    </a>
                 </div>
                 <Navigation currentComp={currentComp} />
             </div>
