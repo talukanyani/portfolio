@@ -1,18 +1,19 @@
-.app_overlay {
-    background-color: var(--black2);
-}
-
-.app {
-    width: 480px;
-    height: 100vh;
+.main {
+    max-width: 1280px;
     margin: auto;
-    color: var(--white1);
-    -webkit-box-shadow: 0px 0px 10px var(--black1);
-    box-shadow: 0px 0px 10px var(--black1);
 }
 
-@media screen and (max-width: 480px) {
-    .app {
-        width: 100vw;
-    }
+.main>div {
+    height: 100vh;
+    min-height: max-content;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 5rem 1rem 1rem;
+    scroll-snap-align: start;
+}
+
+.main>div::-webkit-scrollbar {
+    display: none;
 }

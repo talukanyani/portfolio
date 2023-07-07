@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import styles from './Projects.module.css'
 
-import web_screenshoot from '../assets/tmlab_website_screenshoot.jpg'
-import arrow_left from '../assets/icon_arrow_left.svg'
-import arrow_right from '../assets/icon_arrow_right.svg'
 
 export default function Projects() {
     const [currentTab, setCurrentTab] = useState(0)
@@ -28,7 +25,6 @@ export default function Projects() {
                     onClick={handleLeftArrowClick}
                     disabled={currentTab === 0}
                 >
-                    <img src={arrow_left} alt='arrow button' />
                 </button>
                 <section>
                     <input
@@ -57,7 +53,6 @@ export default function Projects() {
                     onClick={handleRightArrowClick}
                     disabled={currentTab === 2}
                 >
-                    <img src={arrow_right} alt='arrow button' />
                 </button>
             </nav>
             {currentTab === 0 && <Project1 />}

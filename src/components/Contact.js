@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import styles from './Contact.module.css'
 
-import email from '../assets/icon_email.svg'
-import call from '../assets/icon_call.svg'
-import message from '../assets/icon_message.svg'
+import email from '../assets/icons/email.svg'
 
 export default function Contact() {
     const [currentTab, setCurrentTab] = useState(0)
 
     return (
-        <div className={styles.contact}>
+        <div id='contact' className={styles.contact}>
             <h1>Contact Me</h1>
             <nav>
                 <ul>
@@ -32,7 +30,6 @@ export default function Contact() {
                                 : undefined
                         }
                     >
-                        <img src={call} alt='icon' />
                         Call
                     </li>
                 </ul>

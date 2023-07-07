@@ -1,115 +1,50 @@
+import React from 'react'
 import styles from './Navbar.module.css'
 
-import talu_img from '../assets/talu_image96x96.jpg'
-import home from '../assets/icon_home.svg'
-import education from '../assets/icon_education.svg'
-import skills from '../assets/icon_skills.svg'
-import projects from '../assets/icon_projects.svg'
-import contact from '../assets/icon_contact.svg'
+export default function Navbar({ currentComp }) {
+    const scrollto = (id) => {
+        var element = document.getElementById(id)
+        var position = element.getBoundingClientRect().top
 
-export default function Navbar({
-    currentTab,
-    setToHome,
-    setToEdu,
-    setToSkills,
-    setToProjects,
-    setToContact
-}) {
-    return (
-        <div className={styles.navbar}>
-            <Header />
-            <Navigation
-                currentTab={currentTab}
-                setToHome={setToHome}
-                setToEdu={setToEdu}
-                setToProjects={setToProjects}
-                setToSkills={setToSkills}
-                setToContact={setToContact}
-            />
-        </div>
-    )
-}
+        var offset = position + window.scrollY
 
-function Header() {
+        window.scrollTo(0, offset)
+    }
+
     return (
-        <header className={styles.header}>
-            <img
-                src={talu_img}
-                alt="Talukanyani's avatar"
-            />
+        <nav className={styles.navbar}>
             <section>
-                <h1>Talukanyani Mutshaeni</h1>
-                <p>Full Stack Web Developer</p>
+                <a href='/portfolio'>Talu</a>
             </section>
-        </header>
-    )
-}
-
-function Navigation({
-    currentTab,
-    setToHome,
-    setToEdu,
-    setToSkills,
-    setToProjects,
-    setToContact
-}) {
-
-    return (
-        <nav className={styles.navigation}>
             <ul>
                 <li
-                    onClick={setToHome}
-                    className={
-                        currentTab === 0
-                            ? styles.home_li
-                            : undefined
-                    }
+                    className={currentComp === 1 ? styles.current : undefined}
+                    onClick={() => scrollto('overview')}
                 >
-                    <img src={home} alt='icon' />
-                    Home
+                    Overview
                 </li>
                 <li
-                    onClick={setToEdu}
-                    className={
-                        currentTab === 1
-                            ? styles.edu_li
-                            : undefined
-                    }
+                    className={(currentComp > 1 && currentComp < 4) ? styles.current : undefined}
+                    onClick={() => scrollto('projects')}
                 >
-                    <img src={education} alt='icon' />
-                    Education
-                </li>
-                <li
-                    onClick={setToSkills}
-                    className={
-                        currentTab === 2
-                            ? styles.skills_li
-                            : undefined
-                    }
-                >
-                    <img src={skills} alt='icon' />
-                    Skills
-                </li>
-                <li
-                    onClick={setToProjects}
-                    className={
-                        currentTab === 3
-                            ? styles.projects_li
-                            : undefined
-                    }
-                >
-                    <img src={projects} alt='icon' />
                     Projects
+                    <input
+                        type='radio'
+                        name='projects'
+                        checked={currentComp === 2}
+                        onChange={() => scrollto('sc')}
+                    />
+                    <input
+                        type='radio'
+                        name='projects'
+                        checked={currentComp === 3}
+                        onChange={() => scrollto('muts')}
+                    />
                 </li>
                 <li
-                    onClick={setToContact}
-                    className={
-                        currentTab === 4
-                            ? styles.contact_li
-                            : undefined
-                    }
+                    className={currentComp === 4 ? styles.current : undefined}
+                    onClick={() => scrollto('contact')}
                 >
-                    <img src={contact} alt='icon' />
                     Contact
                 </li>
             </ul>
