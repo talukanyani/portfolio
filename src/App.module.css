@@ -5,6 +5,7 @@
 
 .main>div {
     height: 100vh;
+    height: 100svh;
     min-height: max-content;
     overflow-y: scroll;
     scrollbar-width: none;

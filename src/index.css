@@ -28,6 +28,7 @@
   --foreground_color1: rgb(20, 20, 20);
 
   --grey1: rgb(80, 80, 80);
+  --grey1_opacity50: rgba(80, 80, 80, 0.5);
   --grey2: rgb(200, 200, 200);
 
   --error_color: #bf4040;
