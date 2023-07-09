@@ -25,7 +25,17 @@ export default function Navbar({ currentComp }) {
                 </li>
                 <li
                     className={(currentComp > 1 && currentComp < 4) ? styles.current : undefined}
-                    onClick={() => scrollto('projects')}
+                    onClick={() => {
+                        switch (currentComp) {
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                            default:
+                                scrollto('sc')
+                                break;
+                        }
+                    }}
                 >
                     Projects
                     <input

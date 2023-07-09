@@ -12,7 +12,7 @@
     background-size: contain;
     border: 0.1rem solid var(--grey2);
     border-radius: 40% 50% / 60% 40% 75%;
-    animation: pulse 20s infinite;
+    animation: pulse 20s 5s infinite;
 }
 
 .overview>div:nth-of-type(1) {

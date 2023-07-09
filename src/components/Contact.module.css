@@ -1,117 +1,233 @@
-.contact::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+.contact>h2 {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
-.contact::-webkit-scrollbar {
-    background-color: var(--black3);
-    border-radius: 8px;
+.contact>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.contact::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: var(--color1);
-    -webkit-box-shadow: inset 1px 0.5px 3px var(--black3);
-    box-shadow: inset 1px 0.5px 3px var(--black3);
-}
-
-.contact {
-    height: calc(100vh - 9rem);
-    padding: 0 0.75rem;
-    overflow-y: auto;
-}
-
-.contact h1 {
-    color: var(--color6);
-}
-
-.contact nav {
-    position: absolute;
-}
-
-.contact nav ul {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.contact_info>div {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact_info>div img {
+    width: 1.5rem;
+}
+
+.contact_info>div h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.contact_info>div a {
+    text-decoration: none;
+    color: var(--foreground_color1);
+}
+
+.contact_info>div a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    width: 100%;
+    max-width: 480px;
+    height: 28rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--background_color2);
+}
+
+.message>h3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.message form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.message form section {
+    position: relative;
+}
+
+.message form label {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.4rem;
+    letter-spacing: 0.08rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem;
+    background-color: var(--background_color1);
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transition: all 200ms;
+}
+
+.message form label[for='message'] {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.message form label[for='message'] span {
+    font-size: 0.9rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.4rem;
+    background-color: var(--color3);
+}
+
+.message form :where(input, textarea) {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.15rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 0.75rem 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid var(--background_color3);
+    border-radius: 0.4rem;
+    background: var(--background_color1);
+}
+
+.message form textarea {
+    resize: none;
+}
+
+.message form :where(input, textarea):focus {
+    outline: none;
+}
+
+.message form :where(input:focus,
+    textarea:focus,
+    input:not(:-moz-placeholder-shown),
+    textarea:not(:-moz-placeholder-shown),
+    input:not(:-ms-input-placeholder),
+    textarea:not(:-ms-input-placeholder),
+    input:not(:placeholder-shown),
+    textarea:not(:placeholder-shown),
+)~label {
+    transform: translate(0.6rem, -1rem) scale(0.9);
+    letter-spacing: normal;
+}
+
+.message form button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--background_color1);
+    background-color: var(--foreground_color1);
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.message form button:active {
+    scale: 0.95;
+}
+
+.message form button:disabled {
+    background-color: var(--grey1);
+}
+
+.message form section>span {
+    position: absolute;
+    left: 0;
+    bottom: -1.2rem;
+    font-size: 0.9rem;
+    color: var(--error_color);
+}
+
+.input_error {
+    outline: 0.1rem dashed var(--error_color);
+}
+
+:is(.sent, .error) {
+    margin: auto;
+    display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contact nav li {
-    color: var(--black1);
+:is(.sent, .error) :where(h3, p) {
+    text-align: center;
+    margin: 0;
+}
+
+:is(.sent, .error) span {
     width: 4rem;
     height: 4rem;
-    border-radius: 0.5rem;
-    background-color: var(--color6);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
-.contact nav li:hover {
-    outline: 2px dashed var(--black3);
-    outline-offset: -0.2rem;
+:is(.sent, .error) span img {
+    width: 4rem;
 }
 
-.contact nav li:active {
-    -webkit-box-shadow: 0 3rem 8rem 1rem var(--color6);
-    box-shadow: 0 3rem 8rem 1rem var(--color6);
+.sent h3 {
+    color: var(--success_color);
 }
 
-.email_li {
-    outline: 2px dashed var(--black1);
-    outline-offset: -0.2rem;
+.error h3 {
+    color: var(--error_color);
 }
 
-.call_li {
-    outline: 2px dashed var(--black1);
-    outline-offset: -0.2rem;
-}
-
-.contact nav img {
-    width: 1.75rem;
-}
-
-.contact main {
-    margin-left: 8rem;
-}
-
-.contact main h2 {
+.error button {
+    margin-top: 1.5rem;
     font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
+    padding: 0.25rem 1rem;
+    background: var(--background_color3);
+    border: 0.1rem solid var(--grey2);
+    border-radius: 0.4rem;
+    transition: all 300ms;
 }
 
-.contact main h2::before {
-    content: "——";
-    margin-right: 0.6rem;
+.error button:hover {
+    background-color: var(--grey2);
 }
 
-.contact main a {
-    font-weight: 500;
-    letter-spacing: 0.05rem;
+.error button:active {
+    scale: 0.95;
 }
 
-.contact main a:hover {
-    color: var(--color6);
+.socials {
+    margin: 2.5rem 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.socials a {
+    display: flex;
+    transform-origin: center;
+    transition: all 200ms;
+}
+
+.socials a:hover {
+    rotate: 30deg;
+}
+
+.socials img {
+    width: 2rem;
+
+}
+
+@media screen and (max-width: 1080px) {
+    .contact>div {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .contact>div {
+        grid-template-columns: 1fr;
+    }
 }
