@@ -1,0 +1,197 @@
+:is(.sc, .muts)>h2 {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.sc>div {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.muts>div {
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.sc .picture {
+    width: 80%;
+    aspect-ratio: 10/19;
+    max-width: 240px;
+    margin: 0 auto;
+    border: 0.1rem solid var(--grey2);
+    border-radius: 0.5rem;
+    background-color: var(--background_color2);
+}
+
+.muts .picture {
+    width: 80%;
+    aspect-ratio: 3/2;
+    margin: 0 auto;
+    border: 0.1rem solid var(--background_color3);
+    border-radius: 0.5rem;
+    background-color: var(--background_color1);
+}
+
+.picture img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.description {
+    margin-top: 0;
+}
+
+.case_study_btn {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 16rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--background_color1);
+    background-color: var(--foreground_color1);
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.case_study_btn:active {
+    scale: 0.95;
+}
+
+.product_btns,
+.code_btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sc .product_btns {
+    margin: 1.5rem 0 1rem;
+}
+
+.muts .product_btns {
+    margin: 1.5rem 0;
+}
+
+.product_btns button {
+    padding: 0;
+    border: none;
+}
+
+.product_btns button img {
+    width: 8rem;
+}
+
+.product_btns a {
+    display: flex;
+}
+
+.product_btns>a {
+    color: var(--foreground_color1);
+    transition: all 200ms;
+}
+
+.product_btns>a:hover {
+    color: var(--color2_dark);
+}
+
+.product_btns>a:active {
+    letter-spacing: 0.05rem;
+}
+
+.code_btns button {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0;
+    border: 0.075rem solid var(--grey2);
+    border-radius: 0.4rem;
+    background-color: var(--background_color2);
+    /* box-shadow: 0 0.1rem 0 var(--grey1_opacity50),
+        inset 0 0.05rem 0 var(--grey1_opacity50); */
+    transition: all 200ms cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.code_btns button:hover {
+    background-color: var(--background_color3);
+}
+
+.code_btns button:active {
+    box-shadow: inset 0 0 0.5rem var(--grey2);
+}
+
+.code_btns button a {
+    color: var(--foreground_color1);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.code_btns button a img {
+    width: 1.5rem;
+}
+
+.tools {
+    margin-top: 2rem;
+}
+
+.tools section p:nth-of-type(1) {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.tools section p:nth-of-type(2) {
+    margin: 0;
+}
+
+.case_study {
+    width: 720px;
+    max-width: 80vw;
+    max-height: 80vh;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.case_study::-webkit-scrollbar {
+    display: none;
+}
+
+.case_study h2 {
+    margin-top: 0;
+}
+
+.case_study ul {
+    margin-top: 0.5rem;
+}
+
+.case_study ul ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+@media screen and (max-width: 640px) {
+    :is(.sc, .muts)>h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .sc>div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .muts>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sc .picture {
+        max-width: 160px;
+    }
+}
