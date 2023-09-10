@@ -2,25 +2,11 @@ import React from 'react'
 import styles from './Overview.module.css'
 import useTypingEffect from '../hooks/useTypingEffect'
 
-export default function Overview({ isVisible }) {
-    const texts = [
-        'FullStack Developer',
-        'Mobile Developer',
-        'Web Developer',
-        'JavaScript Developer',
-        'Flutter Developer',
-    ]
-
-    const chars = useTypingEffect(texts)
+export default function Overview() {
+    const chars = useTypingEffect('Software Developer');
 
     return (
-        <div
-            id='overview'
-            className={[
-                styles.overview,
-                isVisible ? styles.visible : undefined,
-            ].join(' ')}
-        >
+        <div id='overview' className={styles.overview}>
             <div>
                 <h1>Talukanyani Mutshaeni</h1>
                 <h2>
@@ -28,10 +14,10 @@ export default function Overview({ isVisible }) {
                     <span>&#95;</span>
                 </h2>
                 <p>
-                    I am a passionate software developer with experience in developing mobile and web applications.
-                    I have gained valuable insights into the full software development lifecycle.
-                    I believe in the power of effective communication and teamwork.
-                    I thrive on transforming ideas into robust and scalable software applications.
+                    I'm a software developer living in Johannesburg, South Africa.
+                    I'm proficient in a variety of programming languages and frameworks,
+                    enabling me to create high-performing websites and mobile applications.
+                    I enjoy turning ideas into robust and scalable software applications.
                 </p>
             </div>
             <div></div>

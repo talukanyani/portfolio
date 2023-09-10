@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import styles from './Modal.module.css'
 
-import closeIcon from '../assets/icons/close.svg'
+import closeIcon from '../../../assets/icons/close.svg'
 
-export default function Modal({ children, isOpen, close }) {
+export default function Modal({ title, children, isOpen, close }) {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflowY = 'hidden'
@@ -27,11 +27,10 @@ export default function Modal({ children, isOpen, close }) {
                     isOpen ? styles.content_visible : undefined
                 ].join(' ')}
             >
-                <img
-                    src={closeIcon}
-                    alt='Close icon button'
-                    onClick={close}
-                />
+                <img src={closeIcon} alt='Close button' onClick={close} />
+                <section className={styles.top_bar}>
+                    <h3>{title}</h3>
+                </section>
                 {children}
             </div>
         </div>

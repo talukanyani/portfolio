@@ -1,56 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import styles from './App.module.css'
+import React, { useEffect, useRef } from 'react';
+import { scrollTO } from './hooks/functions';
 
 import Navbar from './components/Navbar'
 import Overview from './components/Overview';
-import StudentCalendar from './components/StudentCalendar'
-import Muts from './components/Muts'
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 export default function App() {
-  const [currentComp, setCurrentComp] = useState(1)
+  const mainRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    var urlHash = window.location.hash;
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  })
+    if (!urlHash) return;
 
-  const handleScroll = () => {
-    if (position('overview').top < 300 && position('overview').bottom > 300) {
-      setCurrentComp(1)
-      return
-    }
+    // If element with that urlHash does not exist, then stop.
+    var mainElement = mainRef.current;
+    var idElement = mainElement.querySelector(urlHash);
+    if (!idElement) return;
 
-    if (position('sc').top < 300 && position('sc').bottom > 300) {
-      setCurrentComp(2)
-      return
-    }
+    // Remove '#'
+    urlHash = urlHash.substring(1);
 
-    if (position('muts').top < 300 && position('muts').bottom > 300) {
-      setCurrentComp(3)
-      return
-    }
-
-    if (position('contact').top < 300 && position('contact').bottom > 300) {
-      setCurrentComp(4)
-    }
-  }
-
-  const position = (id) => {
-    var element = document.getElementById(id)
-    return element.getBoundingClientRect()
-  }
+    setTimeout(() => {
+      scrollTO(urlHash);
+    }, 1000);
+  }, []);
 
   return (
     <>
-      <Navbar currentComp={currentComp} />
-      <main className={styles.main}>
+      <Navbar />
+      <main ref={mainRef}>
         <Overview />
-        <StudentCalendar />
-        <Muts />
+        <Projects />
         <Contact />
       </main>
     </>

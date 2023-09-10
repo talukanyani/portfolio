@@ -1,4 +1,29 @@
 :root {
+  --system_font_family: -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', sans-serif;
+  --mono_font_family: 'Courier New', Courier, monospace;
+}
+
+:root {
+  --background_color1: rgb(255, 255, 255);
+  --background_color2: rgb(245, 245, 245);
+  --background_color3: rgb(235, 235, 235);
+
+  --foreground_color: rgb(20, 20, 20);
+
+  --grey1: rgb(80, 80, 80);
+  --grey2: rgb(200, 200, 200);
+  --grey2_a50: rgba(200, 200, 200, 0.5);
+
+
+  --color1: #7dc59b;
+  /* --color2: #a7c57d; */
+  --color3: #dfab8f;
+  --color3_dark: #8f5b3f;
+  --color4: #c5bf7d;
+}
+
+:root {
   font-size: 16px;
 }
 
@@ -16,33 +41,8 @@
 
 @media screen and (max-width: 320px) {
   :root {
-    font-size: 8px;
+    font-size: 10px;
   }
-}
-
-:root {
-  --background_color1: rgb(255, 255, 255);
-  --background_color2: rgb(245, 245, 245);
-  --background_color3: rgb(235, 235, 235);
-
-  --foreground_color1: rgb(20, 20, 20);
-
-  --grey1: rgb(80, 80, 80);
-  --grey1_opacity50: rgba(80, 80, 80, 0.5);
-  --grey2: rgb(200, 200, 200);
-
-  --error_color: #bf4040;
-  --success_color: #40bf40;
-
-  --color1: #7dc59b;
-  --color2: #dfab8f;
-  --color2_dark: #8f5b3f;
-  --color3: #c5bf7d;
-}
-
-:root {
-  --system_font_family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  --mono_font_family: 'Courier New', Courier, monospace;
 }
 
 html {
@@ -53,9 +53,7 @@ html {
 body {
   margin: 0;
   font-family: var(--system_font_family);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--foreground_color1);
+  color: var(--foreground_color);
   background-color: var(--background_color1);
 }
 
@@ -64,16 +62,37 @@ body::-webkit-scrollbar {
   background-color: var(--background_color2);
 }
 
-body::-webkit-scrollbar-thumb {
-  border-radius: 0.2rem;
-  background-color: var(--background_color3);
-  box-shadow: inset 0.1rem 0.05rem 0.2rem var(--grey2);
+body::-webkit-scrollbar:hover {
+  outline: 0.1rem solid var(--background_color3);
 }
 
-body::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
   background-color: var(--grey2);
 }
 
 body::-webkit-scrollbar-thumb:active {
-  background-color: var(--primary_color);
+  background-color: var(--grey1);
+}
+
+main {
+  max-width: 1280px;
+  margin: auto;
+}
+
+main>div {
+  padding: 6rem 1rem 2rem;
+}
+
+:is(button, a):active {
+  scale: 0.95;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
 }

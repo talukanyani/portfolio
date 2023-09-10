@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export default function useTypingEffect(texts) {
+export default function useTypingEffect(text) {
     const [chars, setChars] = useState('')
     const [charIndex, setCharIndex] = useState(0)
-    const [textIndex, setTextIndex] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
     const [waitingTime, setWaitingTime] = useState(0)
 
@@ -17,18 +16,18 @@ export default function useTypingEffect(texts) {
 
                 if (charIndex === 1) {
                     setIsDeleting(false)
-                    setTextIndex(prevIndex => (prevIndex + 1) % texts.length)
+                    setWaitingTime(10)
                 }
             } else {
-                setChars(prevChars => (prevChars + texts[textIndex][charIndex]))
+                setChars(prevChars => (prevChars + text[charIndex]))
                 setCharIndex(prevIndex => prevIndex + 1)
 
-                if (charIndex === (texts[textIndex].length - 1)) {
+                if (charIndex === (text.length - 1)) {
                     setIsDeleting(true)
-                    setWaitingTime(20)
+                    setWaitingTime(100)
                 }
             }
-        }, 150)
+        }, 200)
 
         return () => clearInterval(typingInterval)
     })
