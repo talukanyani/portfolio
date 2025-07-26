@@ -1,124 +1,100 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    height: 5rem;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 0.5rem;
-    box-sizing: border-box;
-    background: linear-gradient(180deg,
-            var(--background_color1) 25%,
-            transparent);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background: linear-gradient(180deg,
+      var(--background-color-1) 25%,
+      transparent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar section a {
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    padding: 0.25rem 1rem;
-    border-radius: 50%;
-    background-color: var(--background_color2);
-    display: flex;
+.logo a {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.25rem 1rem;
+  border-radius: 50%;
+  background-color: var(--background-color-2);
+  display: flex;
 }
 
-.navbar ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    width: 24rem;
-    user-select: none;
+.navigations {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 24rem;
+  user-select: none;
 }
 
-.navbar li img {
-    width: 1.5rem;
+.navigations li {
+  padding: 0.4rem;
+  transition: box-shadow 300ms;
+  text-align: center;
 }
 
-.navbar li {
-    padding: 0.4rem;
-    transition: box-shadow 300ms;
-    text-align: center;
+.navigations li:nth-of-type(1) {
+  background-color: var(--color-1);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
-.navbar ul li:nth-of-type(1) {
-    background-color: var(--color1);
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+.navigations li:nth-of-type(2) {
+  background-color: var(--color-3);
 }
 
-.navbar ul li:nth-of-type(2) {
-    background-color: var(--color3);
+.navigations li:nth-of-type(3) {
+  background-color: var(--color-4);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
-.navbar ul li:nth-of-type(3) {
-    background-color: var(--color4);
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+.navigations li:nth-of-type(1):hover {
+  box-shadow: 0 1rem 4rem var(--color-1);
 }
 
-.navbar ul li:nth-of-type(1):hover {
-    box-shadow: 0 1rem 4rem var(--color1);
+.navigations li:nth-of-type(2):hover {
+  box-shadow: 0 1rem 4rem var(--color-3);
 }
 
-.navbar ul li:nth-of-type(2):hover {
-    box-shadow: 0 1rem 4rem var(--color3);
+.navigations li:nth-of-type(3):hover {
+  box-shadow: 0 1rem 4rem var(--color-4);
 }
 
-.navbar ul li:nth-of-type(3):hover {
-    box-shadow: 0 1rem 4rem var(--color4);
+.navigations li:nth-of-type(1):active {
+  box-shadow: 0 1rem 8rem 4rem var(--color-1);
 }
 
-.navbar ul li:nth-of-type(1):active {
-    box-shadow: 0 1rem 8rem 4rem var(--color1);
+.navigations li:nth-of-type(2):active {
+  box-shadow: 0 1rem 8rem 4rem var(--color-3);
 }
 
-.navbar ul li:nth-of-type(2):active {
-    box-shadow: 0 1rem 8rem 4rem var(--color3);
-}
-
-.navbar ul li:nth-of-type(3):active {
-    box-shadow: 0 1rem 8rem 4rem var(--color4);
+.navigations li:nth-of-type(3):active {
+  box-shadow: 0 1rem 8rem 4rem var(--color-4);
 }
 
 .current {
-    outline: 0.1rem dashed var(--grey1);
-    outline-offset: -0.25rem;
-}
-
-.navbar ul li:nth-last-of-type(2) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
-}
-
-.navbar ul li:nth-last-of-type(2) input {
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    border: 0.1rem solid var(--color3_dark);
-    transition: all 200ms ease-in;
-}
-
-.navbar ul li:nth-last-of-type(2) input:checked {
-    border-width: 0.5rem;
+  outline: 0.1rem dashed var(--grey-1);
+  outline-offset: -0.25rem;
 }
 
 @media screen and (max-width: 400px) {
-    .navbar section {
-        display: none;
-    }
+  .logo {
+    display: none;
+  }
 
-    .navbar ul {
-        width: 100%;
-    }
+  .navigations {
+    width: 100%;
+  }
 }

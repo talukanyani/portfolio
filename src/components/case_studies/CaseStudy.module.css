@@ -1,0 +1,42 @@
+.case_study {
+  width: 720px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.case_study h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.case_study :where(ul, p) {
+  margin-top: 0.5rem;
+}
+
+.case_study ul ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.case_study::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--background-color-2);
+}
+
+.case_study::-webkit-scrollbar:hover {
+  outline: 0.1rem solid var(--background-color-3);
+}
+
+.case_study::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: var(--grey-2);
+}
+
+.case_study::-webkit-scrollbar-thumb:active {
+  background-color: var(--grey-1);
+}

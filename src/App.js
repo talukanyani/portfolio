@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { scrollTO } from './hooks/functions';
+import { useEffect, useRef } from 'react';
+import { scrollToComponetWithId } from './hooks/functions';
 
 import Navbar from './components/Navbar'
 import Overview from './components/Overview';
@@ -20,10 +20,10 @@ export default function App() {
     if (!idElement) return;
 
     // Remove '#'
-    urlHash = urlHash.substring(1);
+    var id = urlHash.substring(1)
 
     setTimeout(() => {
-      scrollTO(urlHash);
+      scrollToComponetWithId(id);
     }, 1000);
   }, []);
 
