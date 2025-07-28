@@ -34,8 +34,10 @@
   transition: all 0.2s;
 }
 
-.list_tile:hover {
-  background-color: var(--background-color-3);
+@media (hover: hover) {
+  .list_tile:hover {
+    background-color: var(--background-color-3);
+  }
 }
 
 .list_tile>div {
@@ -56,21 +58,40 @@
   transition: all 200ms;
 }
 
-.icon_button:hover {
-  background-color: var(--grey-2-semitransparent);
-  outline: 0.5rem solid var(--grey-2-semitransparent);
+@media (hover: hover) {
+  .icon_button:hover {
+    background-color: var(--grey-2-semitransparent);
+    outline: 0.5rem solid var(--grey-2-semitransparent);
+  }
 }
 
-.toast_parent {
+.tooltip_container {
   position: relative;
 }
 
-.toast {
-  position: absolute;
-  top: 2rem;
+.tooltip_text {
+  visibility: hidden;
+  font-size: 0.9rem;
   color: var(--background-color-1);
   background-color: var(--grey-1);
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 2rem -1rem var(--grey-2);
+  position: absolute;
+  z-index: 10;
+  bottom: 2rem;
+  transform: translateX(-1rem);
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+@media (hover: hover) {
+  .tooltip_container:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.tooltip_show {
+  visibility: visible;
+  opacity: 1;
 }

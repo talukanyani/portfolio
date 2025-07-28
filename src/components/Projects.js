@@ -5,7 +5,8 @@ import Project from './Project';
 import StudentCalendarCaseStudy from './case_studies/StudentCalendar';
 import StudentCalendarWebsiteCaseStudy from './case_studies/StudentCalendarWebsite';
 
-import muts_sc_page from '../assets/images/muts_sc_page.png';
+import student_calendar_screenshot from '../assets/images/student_calendar_screenshot.png';
+import student_calendar_website_screenshot from '../assets/images/student_calendar_website_screenshot.png';
 
 export default function Projects() {
   return (
@@ -21,8 +22,8 @@ export default function Projects() {
         productLink='https://studentcalendar.app'
         image={
           <img
-            src={muts_sc_page}
-            alt='Screenshoot of Student Calendar app home screen.'
+            src={student_calendar_screenshot}
+            alt='Screenshot of Student Calendar app home screen.'
           />
         }
         caseStudy={<StudentCalendarCaseStudy />}
@@ -31,13 +32,13 @@ export default function Projects() {
         title='Student Calendar Website'
         description='A website that showcases Student Calendar app.'
         tags={
-          ['HTML', 'CSS', 'JavaScript', 'React']
+          ['HTML', 'CSS', 'JavaScript', 'React', 'React Router']
         }
         productLink='https://studentcalendar.app'
         image={
           <img
-            src={muts_sc_page}
-            alt="Student Calendar website page screenshoot."
+            src={student_calendar_website_screenshot}
+            alt="Student Calendar website page screenshot."
           />
         }
         caseStudy={<StudentCalendarWebsiteCaseStudy />}

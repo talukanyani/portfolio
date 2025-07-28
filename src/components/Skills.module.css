@@ -1,0 +1,35 @@
+.skills {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.skills>h2 {
+  margin: 0;
+}
+
+.skills>h3 {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.skills>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills>ul li {
+  background-color: var(--background-color-2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills>ul li img {
+  width: 1.5rem;
+}

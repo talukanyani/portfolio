@@ -5,11 +5,9 @@ export default function StudentCalendarWebsiteCaseStudy() {
     <div className={styles.case_study}>
       <h2>Overview</h2>
       <p>
-        The Student Calendar Website is a responsive, single-page promotional site.
-        Its purpose is to present the features, mission, and download links of the
+        The Student Calendar Website is a platform that present the features, mission,
+        legal infomation, help guides, and download links of the
         Student Calendar app in a clear, attractive, and accessible way.
-        Designed and developed entirely by me, it plays a key role in the app's
-        marketing and discoverability.
       </p>
 
       <h2>Goal</h2>
@@ -18,24 +16,32 @@ export default function StudentCalendarWebsiteCaseStudy() {
         <li>Clearly communicates the app's purpose and value.</li>
         <li>Highlights key features and benefits for students.</li>
         <li>Encourages downloads and builds trust with potential users.</li>
+        <li>Shows legal information (Terms of USe and Privacy Policy).</li>
+        <li>Gives step by step help guides.</li>
         <li>Serves as a hub for sharing the app via links and social platforms.</li>
       </ul>
 
       <h2>Features and Functionality</h2>
       <ul>
-        <li>Interactive, visually appealing, and user-friendly page.</li>
+        <li>Interactive, visually appealing, and user-friendly pages.</li>
+        <li>Routing - navigation between pages.</li>
         <li>
-          Navigation bar, menu, and footer.
-          Opening and closing of a modal.
+          Link buttons to download Student Calendar on Play Store and Microsoft Store.
         </li>
         <li>
-          Link button to download Student Calendar Android version on Play Store.
+          Link buttons to download Student Calendar on Play Store and Microsoft Store.
+        </li>
+        <li>
+          Email submision form for iOS users who wish to get notified when
+          the app becomes available on App Store.
+          With email validation and submission to a backend service.
         </li>
       </ul>
 
       <h2>Development Process</h2>
       <ul>
-        <li>Developed using HTML, CSS, JavaScript, and React.</li>
+        <li>Developed using React, JavaScript, and styled using CSS Modules.</li>
+        <li>Used React Router for seamless navigation between pages.</li>
         <li>
           Implemented responsive design to ensure compatibility with
           various devices and screen sizes.
@@ -51,8 +57,8 @@ export default function StudentCalendarWebsiteCaseStudy() {
 
       <h2>Conclusion</h2>
       <p>
-        Student Calendar website has effectively introduced the Student Calendar mobile app
-        to a wider audience.
+        Student Calendar website has effectively introduced the Student Calendar mobile
+        app to a wider audience.
         This project allowed me to demonstrate my programming and web development skills
         while creating an engaging and informative platform for promoting my app.
       </p>

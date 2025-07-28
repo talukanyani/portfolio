@@ -18,14 +18,14 @@ export default function StudentCalendarCaseStudy() {
         As a university student, I struggled with staying organized and keeping track of
         my assessments.
         Most calendar apps were too general and too complicated for student-specific needs.
-        {/* Traditional apps fall short in this area, especially for academic structures. */}
         I noticed that many of my classmates faced the same problem.
         Multiple modules and assessments run simultaneously.
-        {/* One assignment overlaps with another, a test comes right after a big project,
-        and suddenly you're behind */}
         Without a clear view of what's ahead, it's easy to procrastinate or feel overwhelmed,
-        Student Calendar solves these problems by giving students a visual way to plan
+        Student Calendar solves this problem by giving students a visual way to plan
         and prepare ahead of time.
+        {/* Traditional apps fall short in this area, especially for academic structures. */}
+        {/* One assignment overlaps with another, a test comes right after a big project, 
+        and suddenly you're behind */}
         {/* Time management is one of the biggest challenges in academic life. */}
       </p>
 
@@ -48,7 +48,7 @@ export default function StudentCalendarCaseStudy() {
         <ul>
           <li>
             Users can visualise their schedule in calendar view.
-            With dynamic dates, each date contains a coulored dot representing
+            With dynamic dates, each date contains a coloured dot representing
             an assessment or a plan of that date.
             Users can press on a date to see assessments and plans of that date.
           </li>
@@ -141,8 +141,9 @@ export default function StudentCalendarCaseStudy() {
 
       <h2>Deployment</h2>
       <p>
-        Published the app on Play Store. Not yet published on App Store
-        due to lack of iOS testing tools (such as MacBook) and publishing fee.
+        Published the app on Play Store and Microsoft Store.
+        Not yet published on App Store due to lack of iOS testing tools
+        (MacBook) and publishing fee.
       </p>
 
       <h2>Conclusion</h2>
@@ -151,7 +152,7 @@ export default function StudentCalendarCaseStudy() {
         to showcase my programming and software development skills.
         This project reflects my passion not just for coding,
         but for solving real-world problems that matter to students like me.
-        Programming and dubugging this app on a low performing laptob was not an easy task,
+        Programming and dubugging this app on a low performing laptop was not an easy task,
         but because of passion and dedication the app actually came up.
         Student Calendar has helped hundreds of students improve their productivity
         and academic assessments and plans management.

@@ -3,6 +3,7 @@ import { scrollToComponetWithId } from './hooks/functions';
 
 import Navbar from './components/Navbar'
 import Overview from './components/Overview';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
@@ -32,6 +33,7 @@ export default function App() {
       <Navbar />
       <main ref={mainRef}>
         <Overview />
+        <Skills />
         <Projects />
         <Contact />
       </main>

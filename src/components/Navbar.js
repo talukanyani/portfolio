@@ -19,10 +19,10 @@ export default function Navbar() {
       return;
     }
 
-    // if (positionOfComponentWithId('about').top < 240 && positionOfComponentWithId('about').bottom > 240) {
-    //   setCurrentComp(2)
-    //   return
-    // }
+    if (positionOfComponentWithId('skills').top < 240 && positionOfComponentWithId('skills').bottom > 240) {
+      setCurrentComp(2)
+      return
+    }
 
     if (positionOfComponentWithId('projects').top < 240 && positionOfComponentWithId('projects').bottom > 240) {
       setCurrentComp(3);
@@ -45,12 +45,12 @@ export default function Navbar() {
         >
           Overview
         </li>
-        {/* <li
-                    className={currentComp === 2 ? styles.current : undefined}
-                    onClick={() => scrollToComponetWithId('About')}
-                >
-                    About
-                </li> */}
+        <li
+          className={currentComp === 2 ? styles.current : undefined}
+          onClick={() => scrollToComponetWithId('skills')}
+        >
+          Skills
+        </li>
         <li
           className={(currentComp === 3) ? styles.current : undefined}
           onClick={() => scrollToComponetWithId('projects')}
