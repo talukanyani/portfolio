@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1180f2c5.css",
-    "main.js": "/portfolio/static/js/main.5a97f3f3.js",
+    "main.css": "/portfolio/static/css/main.372041aa.css",
+    "main.js": "/portfolio/static/js/main.ec136923.js",
     "static/media/student_calendar_screenshot.png": "/portfolio/static/media/student_calendar_screenshot.815fbce033ec2e85dbb1.png",
     "static/media/student_calendar_website_screenshot.png": "/portfolio/static/media/student_calendar_website_screenshot.b95dafc8c3eddb069e81.png",
     "static/media/talu.jpg": "/portfolio/static/media/talu.69d3882b2b06bc83965d.jpg",
@@ -27,11 +27,11 @@
     "static/media/angular.svg": "/portfolio/static/media/angular.7b05922bb1a80c3f8034e16c63c36ed4.svg",
     "static/media/close.svg": "/portfolio/static/media/close.75fe0e1f83d79e5db5c71d662eab25f5.svg",
     "static/media/done.svg": "/portfolio/static/media/done.112b44ff4f24f637f72554d1f635f64a.svg",
-    "main.1180f2c5.css.map": "/portfolio/static/css/main.1180f2c5.css.map",
-    "main.5a97f3f3.js.map": "/portfolio/static/js/main.5a97f3f3.js.map"
+    "main.372041aa.css.map": "/portfolio/static/css/main.372041aa.css.map",
+    "main.ec136923.js.map": "/portfolio/static/js/main.ec136923.js.map"
   },
   "entrypoints": [
-    "static/css/main.1180f2c5.css",
-    "static/js/main.5a97f3f3.js"
+    "static/css/main.372041aa.css",
+    "static/js/main.ec136923.js"
   ]
 }
